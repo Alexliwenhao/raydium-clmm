@@ -21,16 +21,20 @@ solana_security_txt::security_txt! {
 }
 
 #[cfg(feature = "devnet")]
-declare_id!("devi51mZmdwUJGU9hjN27vEz64Gps7uUefqxg27EAtH");
-#[cfg(not(feature = "devnet"))]
-declare_id!("CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK");
+declare_id!("52bqGxXwned1bmrA624kvzTo1EmFqntfThg6rRqyrGSC");
+#[cfg(feature = "local")]
+declare_id!("52bqGxXwned1bmrA624kvzTo1EmFqntfThg6rRqyrGSC");
+#[cfg(not(feature = "devnet", feature = "local"))]
+declare_id!("52bqGxXwned1bmrA624kvzTo1EmFqntfThg6rRqyrGSC");
 
 pub mod admin {
     use anchor_lang::prelude::declare_id;
     #[cfg(feature = "devnet")]
-    declare_id!("adMCyoCgfkg7bQiJ9aBJ59H3BXLY3r5LNLfPpQfMzBe");
-    #[cfg(not(feature = "devnet"))]
-    declare_id!("GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ");
+    declare_id!("52bqGxXwned1bmrA624kvzTo1EmFqntfThg6rRqyrGSC");
+    #[cfg(feature = "local")]
+    declare_id!("52bqGxXwned1bmrA624kvzTo1EmFqntfThg6rRqyrGSC");
+    #[cfg(not(feature = "devnet", feature = "local"))]
+    declare_id!("52bqGxXwned1bmrA624kvzTo1EmFqntfThg6rRqyrGSC");
 }
 
 #[program]
